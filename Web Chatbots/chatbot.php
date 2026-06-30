@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style type="text/css">
+  /* Basic reset for the body */ 
+body { 
+font-family: Arial, sans-serif; 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+} 
+/* Chat Icon styles */ 
+.chat-icon { 
+position: fixed; 
+bottom: 20px; 
+right: 20px; 
+background-color: #007bff; 
+color: white; 
+border-radius: 50%; 
+padding: 15px; 
+font-size: 24px; 
+cursor: pointer; 
+z-index: 1000; 
+} 
+/* Chatbot container styles */ 
+.chat-container { 
+position: fixed; 
+bottom: 20px; 
+right: 20px; 
+width: 300px; 
+height: 400px; 
+background-color: white; 
+border: 1px solid #ccc; 
+border-radius: 10px; 
+display: none; /* Hidden by default */ 
+flex-direction: column; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+z-index: 999; 
+} 
+/* Header for the chatbot */ 
+.chat-header { 
+background-color: #007bff; 
+color: white; 
+padding: 10px; 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+border-radius: 10px 10px 0 0; 
+} 
+/* Close button styles */ 
+.close-btn { 
+background-color: red; 
+color: white; 
+border: none; 
+border-radius: 50%; 
+cursor: pointer; 
+} 
+padding: 5px; 
+/* Chatbox styles */ 
+#chatbox { 
+flex-grow: 1; 
+padding: 10px; 
+overflow-y: auto; 
+background-color: #f9f9f9; 
+} 
+.message { 
+margin-bottom: 10px; 
+} 
+.user-message { 
+text-align: right; 
+color: blue; 
+} 
+.bot-message { 
+text-align: left; 
+color: green; 
+} 
+/* Input container */ 
+.input-container { 
+display: flex; 
+padding: 10px; 
+background-color: #f1f1f1; 
+} 
+#userInput { 
+flex-grow: 1; 
+padding: 10px; 
+border: 1px solid #ccc; 
+border-radius: 5px; 
+} 
+button { 
+padding: 10px 15px; 
+margin-left: 5px; 
+background-color: #007bff; 
+color: white; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+}
+</style>
+<body>
+
+  <!-- Chat Icon that triggers the chatbot -->
+  <div id="chatIcon" class="chat-icon" onclick="toggleChat()">
+    🗨️
+  </div>
+
+  <!-- Chatbot Container -->
+  <div class="chat-container" id="chatContainer">
+    <div class="chat-header">
+      <span>Chatbot</span>
+      <button class="close-btn" onclick="toggleChat()">X</button>
+    </div>
+    <div id="chatbox">
+      <div id="chatlog"></div>
+    </div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Type a message..." autofocus>
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
