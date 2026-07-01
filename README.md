@@ -1,500 +1,427 @@
-\# 🚌 Bus Pass Management System
+# 🚌 Bus Pass Management System
 
+![PHP](https://img.shields.io/badge/PHP-8-blue?logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![License](https://img.shields.io/badge/License-Educational-orange)
 
+A web-based **Bus Pass Management System** developed using **PHP, MySQL, HTML5, CSS3, Bootstrap, and JavaScript**. The application digitizes the traditional bus pass process by allowing users to apply for bus passes, renew them, make online payments, track application status, and download digital bus passes. Administrators can efficiently manage users, applications, payments, and reports through an administrative dashboard.
 
-A web-based \*\*Bus Pass Management System\*\* developed using \*\*PHP, MySQL, HTML, CSS, Bootstrap, and JavaScript\*\*. The system digitizes the traditional bus pass process by allowing users to apply, renew, track, and download bus passes online while enabling administrators to manage applications efficiently.
+> 🎓 Developed as an **BCA Final Year Project**.
 
+---
 
+# 📖 Project Overview
 
-\---
+The Bus Pass Management System is designed to automate the bus pass application process for students and working professionals. It eliminates paperwork by providing an online platform where users can register, apply for new bus passes, renew existing passes, make payments, and download digital passes. The system also enables administrators to manage applications, users, payments, and generate reports efficiently.
 
+---
 
+# ✨ Features
 
-\## 📌 Project Overview
+## 👤 User Features
 
+- User Registration & Login
+- Forgot Password & Password Reset
+- Apply for New Bus Pass
+- Renew Existing Bus Pass
+- Track Application Status
+- Online Payment Module
+- Download Bus Pass (PDF)
+- View Bus Pass Details
+- Update User Profile
+- Contact Support
+- Submit Feedback
+- Responsive User Dashboard
 
+---
 
-The Bus Pass Management System provides an easy-to-use platform for students and working professionals to manage their bus passes online. It minimizes paperwork, reduces manual effort, and offers a secure and transparent application process.
+## 👨‍💼 Admin Features
 
+- Secure Admin Login
+- Admin Dashboard
+- Manage Users
+- Manage Bus Pass Applications
+- Approve / Reject Applications
+- Manage Bus Pass Records
+- View Payment Details
+- View Contact Messages
+- View User Feedback
+- Generate User Reports
 
+---
 
-\---
+# 🛠 Tech Stack
 
+## Frontend
 
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
 
-\## 🚀 Features
+## Backend
 
+- PHP
 
+## Database
 
-\### 👤 User Module
+- MySQL
 
+## Libraries Used
 
+- PHPMailer
+- TCPDF
+- FPDF
 
-\- User Registration \& Login
+## Server
 
-\- Forgot Password \& Password Reset
+- XAMPP (Apache + MySQL)
 
-\- Apply for New Bus Pass
+---
 
-\- Renew Existing Bus Pass
+# 📂 Project Structure
 
-\- Track Application Status
-
-\- Download Digital Bus Pass
-
-\- Online Payment
-
-\- Edit User Profile
-
-\- Contact Support
-
-\- Submit Feedback
-
-
-
-\### 👨‍💼 Admin Module
-
-
-
-\- Admin Login
-
-\- Manage Users
-
-\- Approve/Reject Bus Pass Applications
-
-\- Manage Bus Pass Records
-
-\- View Payment Details
-
-\- View Contact Messages
-
-\- View User Feedback
-
-\- Generate Reports
-
-
-
-\---
-
-
-
-\## 🛠️ Tech Stack
-
-
-
-\### Frontend
-
-\- HTML5
-
-\- CSS3
-
-\- Bootstrap 5
-
-\- JavaScript
-
-
-
-\### Backend
-
-\- PHP
-
-
-
-\### Database
-
-\- MySQL
-
-
-
-\### Server
-
-\- XAMPP (Apache)
-
-
-
-\---
-
-
-
-\## 📂 Project Structure
-
-
-
-```
-
-bus\_pass\_system/
-
+```text
+bus_pass_system/
 │
-
 ├── admin/
-
 ├── uploads/
-
 ├── PHPMailer/
-
 ├── tcpdf/
-
 ├── fpdf/
-
 ├── screenshots/
-
-├── index.php
-
-├── login.php
-
-├── register.php
-
-├── dashboard.php
-
 ├── config.php
-
-├── bus\_pass\_management.sql
-
-└── README.md
-
+├── index.php
+├── login.php
+├── register.php
+├── dashboard.php
+├── bus_pass_management.sql
+├── README.md
+└── .gitignore
 ```
 
+---
 
+# 🚀 Installation Guide
 
-\---
-
-
-
-\## ✨ Key Functionalities
-
-
-
-\- Secure User Authentication
-
-\- Online Bus Pass Application
-
-\- Pass Renewal
-
-\- Payment Management
-
-\- Pass Status Tracking
-
-\- PDF Bus Pass Generation
-
-\- Email Notifications
-
-\- Admin Dashboard
-
-\- Feedback Management
-
-
-
-\---
-
-
-
-\## 🗄️ Database
-
-
-
-Import the following database into MySQL:
-
-
-
-```
-
-bus\_pass\_management.sql
-
-```
-
-
-
-\---
-
-
-
-\## ⚙️ Installation
-
-
-
-\### 1. Clone Repository
-
-
+## 1. Clone Repository
 
 ```bash
-
 git clone https://github.com/TanviShevade/bus-pass-management-system.git
 
+cd bus-pass-management-system
 ```
 
+---
 
+## 2. Move Project
 
-\### 2. Move Project
+Copy the project folder into:
 
-
-
-Copy the project folder to:
-
-
-
-```
-
+```text
 xampp/htdocs/
-
 ```
 
+---
 
+## 3. Create Database
 
-\### 3. Import Database
+Open **phpMyAdmin** and create a database named:
 
-
-
-\- Open phpMyAdmin
-
-\- Create a database
-
-\- Import
-
-
-
+```sql
+bus_pass_management
 ```
 
-bus\_pass\_management.sql
+---
 
+## 4. Import Database
+
+Import:
+
+```text
+bus_pass_management.sql
 ```
 
+---
 
+## 5. Configure Database
 
-\### 4. Configure Database
+Open:
 
-
-
-Update the database credentials in:
-
-
-
-```
-
+```text
 config.php
-
 ```
 
+Update your database credentials if necessary:
 
+```php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "bus_pass_management";
+```
 
-\### 5. Start XAMPP
+---
 
-
+## 6. Start XAMPP
 
 Start:
 
+- Apache
+- MySQL
 
+---
 
-\- Apache
+## 7. Run the Project
 
-\- MySQL
-
-
-
-\### 6. Run Project
-
-
-
-```
-
-http://localhost:8085/bus\_pass\_system/index.php
-
-http://localhost/bus\_pass\_system/admin/admin\_login.php
-
-```
-
-
-
-\---
-
-
-
-\## 📸 Screenshots
-
-
-
-> Create a folder named \*\*screenshots\*\* and add your images.
-
-
+User Panel
 
 ```text
-
-screenshots/
-
-│── home.png
-
-│── login.png
-
-│── register.png
-
-│── dashboard.png
-
-│── apply-pass.png
-
-│── payment.png
-
-│── bus-pass.png
-
-│── admin-dashboard.png
-
+http://localhost/bus_pass_system/
 ```
 
+Admin Panel
 
-
-Example:
-
-
-
-```md
-
-\### Home Page
-
-
-
-!\[Home](screenshots/home.png)
-
-
-
-\### Login
-
-
-
-!\[Login](screenshots/login.png)
-
-
-
-\### Dashboard
-
-
-
-!\[Dashboard](screenshots/dashboard.png)
-
-
-
-\### Apply Bus Pass
-
-
-
-!\[Apply](screenshots/apply-pass.png)
-
-
-
-\### Payment
-
-
-
-!\[Payment](screenshots/payment.png)
-
-
-
-\### Bus Pass
-
-
-
-!\[Bus Pass](screenshots/bus-pass.png)
-
-
-
-\### Admin Dashboard
-
-
-
-!\[Admin](screenshots/admin-dashboard.png)
-
+```text
+http://localhost/bus_pass_system/admin/admin_login.php
 ```
 
+---
 
+# 📸 Project Screenshots
 
-\---
+## 🏠 Home Page
 
+![Home](uploads/screenshots/indexPage.png)
 
+---
 
-\## 🔒 User Roles
+## 🏠 Home Page (Alternative View)
 
+![Home 2](uploads/screenshots/indexPage%20copy.png)
 
+---
 
-\### User
+## 📝 User Registration
 
+![Registration](uploads/screenshots/Registration.png)
 
+---
 
-\- Register/Login
+## 📝 Registration Form
 
-\- Apply Bus Pass
+![Registration Copy](uploads/screenshots/Registration%20copy.png)
 
-\- Renew Pass
+---
 
-\- Track Status
+## 🔐 User Login
 
-\- Make Payment
+![Login](uploads/screenshots/Login.png)
 
-\- Download Pass
+---
 
-\- Submit Feedback
+## 🔑 Forgot Password
 
+![Forgot Password](uploads/screenshots/Forgotpassword.png)
 
+---
 
-\### Admin
+## 🔄 Reset Password
 
+![Reset Password](uploads/screenshots/ResetPassword.png)
 
+---
 
-\- Manage Users
+## 👤 User Dashboard
 
-\- Approve Applications
+![Dashboard](uploads/screenshots/UserDashboard.png)
 
-\- Manage Pass Records
+---
 
-\- View Payments
+## 🚌 Apply for Bus Pass
 
-\- Generate Reports
+![Apply Pass](uploads/screenshots/ApplyForPass.png)
 
+---
 
+## 💳 Payment Form
 
-\---
+![Payment](uploads/screenshots/PaymentForm.png)
 
+---
 
+## 🎫 View Bus Pass
 
-\## 🌟 Future Enhancements
+![View Pass](uploads/screenshots/ViewPass.png)
 
+---
 
+## 📄 Download Bus Pass (PDF)
 
-\- Mobile Application
+![Download Pass](uploads/screenshots/DownloadPass(PDF).png)
 
-\- QR Code Verification
+---
 
-\- SMS Notifications
+## 🔄 Renew Bus Pass
 
-\- Automatic Renewal Reminder
+![Renew Pass](uploads/screenshots/RenewPass.png)
 
-\- Digital Wallet Integration
+---
 
-\- Multi-language Support
+## 📍 Track Application Status
 
-\- AI Chatbot Support
+![Track Status](uploads/screenshots/TrackApplicationStatus.png)
 
+---
 
+## 👤 Update Profile
 
-\---
+![Update Profile](uploads/screenshots/UpdateProfile.png)
 
+---
 
+## 📞 Contact Us
 
-\## 👩‍💻 Developer
+![Contact](uploads/screenshots/ContactUs.png)
 
+---
 
+## ❓ FAQs
 
-\*\*Tanvi Shevade\*\*
+![FAQs](uploads/screenshots/FAQs.png)
 
+---
 
+## 💬 Feedback Form
 
-\- GitHub: https://github.com/TanviShevade
+![Feedback](uploads/screenshots/FeedbackForm.png)
 
+---
 
+# 👨‍💼 Admin Screens
 
-\---
+## 🔐 Admin Login
 
+![Admin Login](uploads/screenshots/AdminLogin.png)
 
+---
 
-\## 📄 License
+## 📊 Admin Dashboard
 
+![Admin Dashboard](uploads/screenshots/AdminDashboard.png)
 
+---
 
-This project is developed for educational purposes.
+## 👥 Manage Users
 
+![Manage Users](uploads/screenshots/ManageUsers.png)
+
+---
+
+## 🚌 Manage Bus Pass
+
+![Manage Bus Pass](uploads/screenshots/ManageBusPass.png)
+
+---
+
+## 📋 Manage Bus Pass Records
+
+![Manage Bus Pass Records](uploads/screenshots/ManageBusPassRecords.png)
+
+---
+
+## 💳 View Payments
+
+![View Payment](uploads/screenshots/ViewPayment.png)
+
+---
+
+## 📞 View Contact Messages
+
+![View Contact](uploads/screenshots/ViewContact.png)
+
+---
+
+## 💬 View Feedback
+
+![View Feedback](uploads/screenshots/ViewFeedback.png)
+
+---
+
+## 📈 User Report
+
+![User Report](uploads/screenshots/UserReport.png)
+
+---
+
+# ✨ Key Functionalities
+
+- Secure User Authentication
+- Online Bus Pass Application
+- Bus Pass Renewal
+- Online Payment System
+- PDF Bus Pass Generation
+- Email Notifications
+- Pass Status Tracking
+- User Profile Management
+- Contact & Feedback Module
+- Admin Dashboard
+- Report Generation
+
+---
+
+# 🔮 Future Enhancements
+
+- QR Code Verification
+- Razorpay Payment Gateway
+- SMS Notifications
+- Email Reminder for Pass Expiry
+- Mobile Application
+- Multi-language Support
+- AI Chatbot Support
+- Advanced Analytics Dashboard
+
+---
+
+# 🏛 System Architecture
+
+```text
+User
+   │
+   ▼
+Browser
+   │
+   ▼
+PHP Application
+   │
+   ▼
+MySQL Database
+```
+
+---
+
+# 👩‍💻 Developer
+
+**Tanvi Shevade**
+
+🎓 MCA Student
+
+💻 Aspiring Full Stack Developer
+
+### Connect with Me
+
+- **GitHub:** https://github.com/TanviShevade
+- **LinkedIn:** https://www.linkedin.com/in/tanvi-shevade-aabbb6280
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
+
+---
+
+# 📄 License
+
+This project was developed as an **BCA Final Year Project** 
